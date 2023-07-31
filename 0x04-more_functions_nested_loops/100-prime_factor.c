@@ -11,21 +11,21 @@
 
 int main(void)
 {
-	long int maxNum = 20;
-	long int y;
+	long int n = 20;
+	long int d;
 
-	while (maxNum % 2 == 0)
+	while (n % 2 == 0)
 	{
-		maxNum = maxNum / 2;
+		n = n / 2;
 	}
 
-	for (y = 3; y < sqrt(maxNum); y = y + 2)
+	for (d = 3; d < sqrt(n); d = d + 2)
 	{
-		while (maxNum % y == 0)
+		while (n % d == 0)
 		{
-			maxNum = maxNum / y;
+			n = n / d;
 		}
 	}
-	printf("%li", maxNum);
+	printf("%li", n);
 	return (0);
 }
