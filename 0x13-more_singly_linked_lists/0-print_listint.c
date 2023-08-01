@@ -7,14 +7,14 @@
  */
 size_t print_listint(const listint_t *a)
 {
- size_t nOn = 0;
+const listint_t *temp = a;
+ size_t numOfnodes;
 
- while (a)
- {
- printf("%d\n", a->n);
- nOn++;
- a = a->next;
- }
+ for (numOfnodes = 0; temp != NULL; numOfnodes++)
+	{
+		printf("%d\n", temp->n);
+		temp = temp->next; /*point to the next node*/
+	}
 
- return (nOn);
+ return (numOfnodes);
 }
